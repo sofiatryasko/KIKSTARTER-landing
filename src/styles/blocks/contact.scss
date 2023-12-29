@@ -1,6 +1,8 @@
 .contact {
   font-family: Inter, sans-serif;
   align-items: center;
+  outline: none;
+  box-shadow: none;
 
   &__title {
     font-size: 30px;
@@ -36,11 +38,6 @@
     @include onTablet {
       padding: 12px 30px;
     }
-
-    &:focus {
-      border: 1px solid #0c797a;
-    }
-
   }
 
   &::placeholder {
@@ -74,4 +71,18 @@
       background-color: $dark-green;
     }
   }
+
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    outline: none;
+    border: 1px solid #828282;
+  }
+
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill:focus,
+  .contact__field:focus {
+    border-color: #0C797A;
+    outline: none;
+  }
+
 }
